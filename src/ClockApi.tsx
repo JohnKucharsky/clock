@@ -35,7 +35,7 @@ function ClockApi() {
     let clockInterval = setInterval(fetchTime, 1000);
     function fetchTime() {
       const request = new Request(
-        "http://worldtimeapi.org/api/timezone/Europe/Moscow",
+        "https://worldtimeapi.org/api/timezone/Europe/Moscow",
         {
           method: "GET",
         },
