@@ -39,7 +39,8 @@ function ClockNoApi() {
         <div className={"dial hours"} style={hoursStyle} />
       </div>
       <div className={"digital-clock"}>
-        {time.hours}:{time.minutes}:{time.seconds}
+        {time.hours}:{time.minutes < 10 ? "0" + time.minutes : time.minutes}:
+        {time.seconds < 10 ? "0" + time.seconds : time.seconds}
       </div>
     </div>
   );

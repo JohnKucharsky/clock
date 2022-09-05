@@ -68,14 +68,15 @@ function ClockApi() {
 
   return (
     <div className={"clock"}>
-      <h3>Clock</h3>
+      <h3>Clock Api</h3>
       <div className={"analog-clock"}>
         <div className={"dial seconds"} style={secondsStyle} />
         <div className={"dial minutes"} style={minutesStyle} />
         <div className={"dial hours"} style={hoursStyle} />
       </div>
       <div className={"digital-clock"}>
-        {time.hours}:{time.minutes}:{time.seconds}
+        {time.hours}:{time.minutes < 10 ? "0" + time.minutes : time.minutes}:
+        {time.seconds < 10 ? "0" + time.seconds : time.seconds}
       </div>
     </div>
   );
